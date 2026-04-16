@@ -213,11 +213,44 @@ const CONTENT_REVEAL_START_DELAY_MS = parseCssTimeToMs(
 
 let revealTimerId = null
 
+const LAST_SLIDE_SESSION_KEY = 'taxfree:last-main-slide'
+
+function getMainSlidesCount() {
+  const mainWrapper = document.querySelector('.main-slider > .swiper-wrapper')
+  if (!mainWrapper) return 0
+  return Array.from(mainWrapper.children).filter(el => el.classList.contains('swiper-slide')).length
+}
+
+function getSavedMainSlideIndex() {
+  const maxSlides = getMainSlidesCount()
+  if (maxSlides <= 0) return 0
+
+  try {
+    const raw = window.sessionStorage.getItem(LAST_SLIDE_SESSION_KEY)
+    const index = Number.parseInt(raw || '', 10)
+    if (!Number.isFinite(index)) return 0
+    return Math.min(Math.max(index, 0), maxSlides - 1)
+  } catch {
+    return 0
+  }
+}
+
+function saveMainSlideIndex(index) {
+  if (!Number.isFinite(index)) return
+
+  try {
+    window.sessionStorage.setItem(LAST_SLIDE_SESSION_KEY, String(index))
+  } catch {
+    // Ignore storage write issues (privacy mode, disabled storage, etc.)
+  }
+}
+
 const swiper = new Swiper('.main-slider', {
   direction:  'vertical',
   speed:       900,
   parallax:    true,
   grabCursor:  true,
+  initialSlide: getSavedMainSlideIndex(),
   mousewheel: {
     sensitivity: 1,
     releaseOnEdges: true,
@@ -234,6 +267,7 @@ const swiper = new Swiper('.main-slider', {
       updateNavLinks(sw)
       updateSlideNumberButtons(sw)
       updateFooterTheme(sw)
+      saveMainSlideIndex(sw.activeIndex)
     },
     slideChangeTransitionStart(sw) {
       sw.slides.forEach(s => s.classList.remove('is-visible'))
@@ -244,6 +278,7 @@ const swiper = new Swiper('.main-slider', {
       updateNavLinks(sw)
       updateSlideNumberButtons(sw)
       updateFooterTheme(sw)
+      saveMainSlideIndex(sw.activeIndex)
     },
   },
 })
