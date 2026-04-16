@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IRS Penalty Removal Application — снимаем штрафы за Form 5472, 1065, 1120. Профессиональная подготовка документов и переписка с IRS.">
+
+  <title>IRS Penalty Removal — TaxFreeCorp</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/vars.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- =========================================
+       HEADER
+       ========================================= -->
+  <header class="header" id="header">
+    <div class="header__container">
+      <div class="header__top">
+        <a href="#" class="header__logo" data-slide="0">
+          <span class="logo-tax">Tax</span><span class="logo-free">Free</span><span class="logo-corp">Corp</span>
+        </a>
+
+        <div class="header__actions">
+        <div class="header-social" aria-label="Social media links">
+          <a class="header-social__link" href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 14.3l-2.95-.924c-.64-.203-.658-.64.136-.954l11.566-4.461c.537-.194 1.006.131.972.26z"/>
+            </svg>
+          </a>
+          <a class="header-social__link" href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="lang-switch" aria-label="Language">
+          <button class="lang-btn lang-btn--active" data-lang="ru" aria-label="Русский">RU</button>
+          <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        </div>
+
+        <a href="#" class="btn btn--primary header__cta" data-slide="8" data-i18n="cta_header">Написать нам</a>
+
+        <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="mobileNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        </div>
+      </div>
+
+      <nav class="header__nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a class="nav__link" data-slide="1" href="#" data-i18n="nav_penalty">О штрафе</a></li>
+          <li><a class="nav__link" data-slide="2" href="#" data-i18n="nav_service">Что делаем</a></li>
+          <li><a class="nav__link" data-slide="3" href="#" data-i18n="nav_qualify">Кто подходит</a></li>
+          <li><a class="nav__link" data-slide="4" href="#" data-i18n="nav_process">Как работаем</a></li>
+          <li><a class="nav__link" data-slide="6" href="#" data-i18n="nav_reviews">Отзывы</a></li>
+          <li><a class="nav__link" data-slide="7" href="#" data-i18n="nav_quiz">Квиз</a></li>
+          <li><a class="nav__link" data-slide="8" href="#" data-i18n="nav_contact">Контакты</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- =========================================
+       MOBILE NAV OVERLAY
+       ========================================= -->
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Навигация">
+    <ul class="mobile-nav__list">
+      <li><a class="mobile-nav__link" data-slide="1" href="#" data-i18n="nav_penalty">О штрафе</a></li>
+      <li><a class="mobile-nav__link" data-slide="2" href="#" data-i18n="nav_service">Что делаем</a></li>
+      <li><a class="mobile-nav__link" data-slide="3" href="#" data-i18n="nav_qualify">Кто подходит</a></li>
+      <li><a class="mobile-nav__link" data-slide="4" href="#" data-i18n="nav_process">Как работаем</a></li>
+      <li><a class="mobile-nav__link" data-slide="5" href="#" data-i18n="important_label">Важно знать</a></li>
+      <li><a class="mobile-nav__link" data-slide="6" href="#" data-i18n="nav_reviews">Отзывы</a></li>
+      <li><a class="mobile-nav__link" data-slide="7" href="#" data-i18n="nav_quiz">Квиз</a></li>
+      <li><a class="mobile-nav__link" data-slide="8" href="#" data-i18n="nav_contact">Контакты</a></li>
+    </ul>
+  </div>
+
+
+    <!-- =========================================
+      SLIDE NAV (up/down arrows + 1..7)
+      ========================================= -->
+  <div class="slide-nav" role="navigation" aria-label="Навигация по слайдам">
+    <button class="slide-nav__btn slide-nav__btn--prev" id="slidePrev" aria-label="Предыдущий слайд">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="18 15 12 9 6 15"/>
+      </svg>
+    </button>
+
+    <div class="slide-nav__numbers" aria-label="Перейти к слайду">
+      <button class="slide-nav__num is-active" type="button" data-slide-nav="0" aria-label="Слайд 1" aria-current="true">1</button>
+      <button class="slide-nav__num" type="button" data-slide-nav="1" aria-label="Слайд 2">2</button>
+      <button class="slide-nav__num" type="button" data-slide-nav="2" aria-label="Слайд 3">3</button>
+      <button class="slide-nav__num" type="button" data-slide-nav="3" aria-label="Слайд 4">4</button>
+      <button class="slide-nav__num" type="button" data-slide-nav="4" aria-label="Слайд 5">5</button>
+      <button class="slide-nav__num" type="button" data-slide-nav="5" aria-label="Слайд 6">6</button>
+      <button class="slide-nav__num" type="button" data-slide-nav="6" aria-label="Слайд 7">7</button>
+      <button class="slide-nav__num" type="button" data-slide-nav="7" aria-label="Слайд 8">8</button>
+      <button class="slide-nav__num" type="button" data-slide-nav="8" aria-label="Слайд 9">9</button>
+    </div>
+
+    <button class="slide-nav__btn slide-nav__btn--next" id="slideNext" aria-label="Следующий слайд">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+    </button>
+  </div>
+
+
+  <!-- =========================================
+       SWIPER — MAIN SLIDER
+       ========================================= -->
+  <div class="swiper main-slider" id="mainSlider">
+    <div class="swiper-wrapper">
+
+
+      <!-- ====== SLIDE 1 — HERO ====== -->
+      <div class="swiper-slide slide slide--hero">
+
+        <!-- Decorative BG number (parallax) -->
+        <div class="hero__bg-number" data-swiper-parallax="55%" aria-hidden="true">5472</div>
+
+        <div class="slide__content container hero__layout">
+          <div class="hero__main">
+            <div class="hero-badge" data-i18n="hero_badge" data-swiper-parallax="-20%">IRS Penalty Removal</div>
+
+            <h1 class="hero__title" data-swiper-parallax="-15%">
+              <span data-i18n="hero_title_1">IRS начислил штраф</span><br>
+              <span class="text-accent" data-i18n="hero_title_2">за Form 5472?</span>
+            </h1>
+
+            <p class="hero__sub" data-i18n="hero_sub" data-swiper-parallax="-10%">
+              Во многих случаях его можно снять. Мы помогаем с запросом на Penalty Removal и ведём переписку с IRS за вас.
+            </p>
+
+            <div class="hero__trust" data-swiper-parallax="-9%">
+              <span class="hero__trust-item">Form 5472 / 1065 / 1120</span>
+              <span class="hero__trust-item">Reasonable Cause Strategy</span>
+              <span class="hero__trust-item">IRS Correspondence Support</span>
+            </div>
+
+            <div class="hero__actions" data-swiper-parallax="-8%">
+              <a href="#" class="btn btn--primary btn--lg" data-slide="8" data-i18n="hero_cta">Разобраться в ситуации</a>
+              <a href="#" class="btn btn--ghost btn--lg"   data-slide="1" data-i18n="hero_learn">Узнать больше →</a>
+            </div>
+          </div>
+
+          <div class="hero__objects" id="heroObjects" aria-hidden="true"></div>
+        </div>
+
+      </div><!-- /slide hero -->
+
+
+      <!-- ====== SLIDE 2 — О ШТРАФЕ ====== -->
+      <div class="swiper-slide slide slide--penalty">
+        <div class="slide__content container">
+
+          <div class="slide__label" data-i18n="penalty_label">О штрафе</div>
+          <h2 class="slide__title" data-i18n="penalty_title">Что это за штраф и почему он такой большой</h2>
+
+          <div class="penalty-stats">
+            <div class="stat-card">
+              <div class="stat-card__num" data-count="25000" data-prefix="$">$25,000</div>
+              <div class="stat-card__desc" data-i18n="stat1_desc">штраф за неподачу Form 5472</div>
+            </div>
+
+            <div class="stat-card stat-card--alt">
+              <div class="stat-card__num" data-count="25000" data-prefix="+$">+$25,000</div>
+              <div class="stat-card__desc" data-i18n="stat2_desc">за каждые 30 дней после уведомления IRS</div>
+            </div>
+
+            <div class="stat-card stat-card--sym">
+              <div class="stat-card__sym" aria-label="Без лимита">∞</div>
+              <div class="stat-card__desc" data-i18n="stat3_desc">максимального лимита нет</div>
+            </div>
+          </div>
+
+          <p class="slide__note" data-i18n="penalty_note">
+            Часто назначается владельцам иностранных компаний, которые просто не знали о требовании по подаче.
+          </p>
+
+        </div>
+      </div><!-- /slide penalty -->
+
+
+      <!-- ====== SLIDE 3 — ЧТО МЫ ДЕЛАЕМ ====== -->
+      <div class="swiper-slide slide slide--service">
+        <div class="slide__content container">
+
+          <div class="service-split">
+            <div class="service-split__content">
+              <div class="slide__label" data-i18n="service_label">Наша услуга</div>
+              <h2 class="slide__title" data-i18n="service_title">IRS Penalty Removal Application — что входит</h2>
+
+              <ul class="feature-list" aria-label="Список услуг">
+                <li class="feature-list__item">
+                  <span class="feature-list__icon" aria-hidden="true">01</span>
+                  <span data-i18n="service_1">Подготовка Form 2848 <em>(Power of Attorney)</em></span>
+                </li>
+                <li class="feature-list__item">
+                  <span class="feature-list__icon" aria-hidden="true">02</span>
+                  <span data-i18n="service_2">Анализ вашей ситуации и оснований для снятия штрафа</span>
+                </li>
+                <li class="feature-list__item">
+                  <span class="feature-list__icon" aria-hidden="true">03</span>
+                  <span data-i18n="service_3">Подготовка аргументированного ответа в IRS с запросом на <em>penalty removal for cause</em></span>
+                </li>
+                <li class="feature-list__item">
+                  <span class="feature-list__icon" aria-hidden="true">04</span>
+                  <span data-i18n="service_4">Ограниченный бухгалтерский анализ при необходимости</span>
+                </li>
+                <li class="feature-list__item">
+                  <span class="feature-list__icon" aria-hidden="true">05</span>
+                  <span data-i18n="service_5">Переписка с IRS: collection dept., service center, appeal unit</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="service-media">
+              <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1100&q=80" alt="Consultation and document strategy" loading="lazy">
+              <div class="service-media__caption">Документы, стратегия и коммуникация с IRS под ключ</div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /slide service -->
+
+
+      <!-- ====== SLIDE 4 — КТО ПОДХОДИТ ====== -->
+      <div class="swiper-slide slide slide--qualify">
+        <div class="slide__content container">
+
+          <div class="slide__label" data-i18n="qualify_label">Критерии</div>
+          <h2 class="slide__title" data-i18n="qualify_title">Есть ли у вас шанс снять штраф?</h2>
+          <p class="slide__intro" data-i18n="qualify_intro">Вы можете подать запрос, если выполнено хотя бы одно из условий:</p>
+
+          <ul class="check-list" aria-label="Критерии для снятия штрафа">
+            <li data-i18n="qualify_1">Это первый случай просрочки <em>(First-time abatement)</em></li>
+            <li data-i18n="qualify_2">Есть Reasonable Cause — объективная причина</li>
+            <li data-i18n="qualify_3">Вы не знали о требовании по подаче Form 5472</li>
+            <li data-i18n="qualify_4">Компания была неактивной (без доходов и расходов)</li>
+            <li data-i18n="qualify_5">Компания без физического присутствия в США (no U.S. nexus)</li>
+            <li data-i18n="qualify_6">Документы поданы до extended deadline</li>
+            <li data-i18n="qualify_7">Ранее подобных штрафов не было</li>
+          </ul>
+
+        </div>
+      </div><!-- /slide qualify -->
+
+
+      <!-- ====== SLIDE 5 — КАК РАБОТАЕМ ====== -->
+      <div class="swiper-slide slide slide--process">
+        <div class="slide__content container">
+
+          <div class="slide__label" data-i18n="process_label">Процесс</div>
+          <h2 class="slide__title" data-i18n="process_title">Как проходит работа</h2>
+
+          <div class="process-steps">
+            <div class="step">
+              <div class="step__num" aria-hidden="true">1</div>
+              <div class="step__body">
+                <h3 class="step__title" data-i18n="step1_title">Вы пишете нам</h3>
+                <p  class="step__desc"  data-i18n="step1_desc">Описываете ситуацию: когда получен штраф, какая форма, обстоятельства</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step__num" aria-hidden="true">2</div>
+              <div class="step__body">
+                <h3 class="step__title" data-i18n="step2_title">Разбираем ситуацию</h3>
+                <p  class="step__desc"  data-i18n="step2_desc">Оцениваем, подходите ли под программу penalty relief</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step__num" aria-hidden="true">3</div>
+              <div class="step__body">
+                <h3 class="step__title" data-i18n="step3_title">Готовим документы</h3>
+                <p  class="step__desc"  data-i18n="step3_desc">Полный пакет документов и аргументированный ответ в IRS</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step__num" aria-hidden="true">4</div>
+              <div class="step__body">
+                <h3 class="step__title" data-i18n="step4_title">Ведём переписку</h3>
+                <p  class="step__desc"  data-i18n="step4_desc">Общаемся с IRS до получения результата</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /slide process -->
+
+
+      <!-- ====== SLIDE 6 — ВАЖНО ====== -->
+      <div class="swiper-slide slide slide--important">
+        <div class="slide__content container">
+
+          <div class="slide__label" data-i18n="important_label">Важно знать</div>
+          <h2 class="slide__title" data-i18n="important_title">Что важно понимать об услуге</h2>
+
+          <div class="important-grid">
+            <div class="important-card important-card--no">
+              <div class="important-card__icon" aria-hidden="true">✕</div>
+              <h3 data-i18n="important_not_title">Что не включено</h3>
+              <ul aria-label="Не включено в услугу">
+                <li data-i18n="important_not_1">Судебное представительство</li>
+                <li data-i18n="important_not_2">Юридические споры и аудит</li>
+                <li data-i18n="important_not_3">Гарантия результата</li>
+              </ul>
+            </div>
+
+            <div class="important-card important-card--yes">
+              <div class="important-card__icon" aria-hidden="true">✓</div>
+              <h3 data-i18n="important_yes_title">Что мы делаем</h3>
+              <ul aria-label="Включено в услугу">
+                <li data-i18n="important_yes_1">Подготовка документов и аргументации</li>
+                <li data-i18n="important_yes_2">Профессиональная коммуникация с IRS</li>
+                <li data-i18n="important_yes_3">Сопровождение процесса снятия штрафа</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="slide__note" data-i18n="important_note">
+            Результат зависит от конкретной ситуации. Напишите нам — и мы честно скажем, есть ли у вас шансы.
+          </p>
+
+        </div>
+      </div><!-- /slide important -->
+
+
+      <!-- ====== SLIDE 7 — ОТЗЫВЫ ====== -->
+      <div class="swiper-slide slide slide--reviews">
+        <div class="slide__content container">
+
+          <div class="slide__label" data-i18n="reviews_label">Отзывы клиентов</div>
+          <h2 class="slide__title" data-i18n="reviews_title">Истории тех, кому уже помогли снять штраф</h2>
+
+          <div class="reviews-slider swiper" id="reviewsSlider">
+            <div class="swiper-wrapper">
+              <article class="swiper-slide review-card">
+                <img class="review-card__photo" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Client portrait" loading="lazy">
+                <div class="review-card__body">
+                  <h3 class="review-card__name">Daniel K., Miami</h3>
+                  <p class="review-card__text">"Получил штраф за Form 5472, думал закрывать компанию. Команда подготовила ответ в IRS, и спустя несколько месяцев штраф был снят."</p>
+                </div>
+              </article>
+
+              <article class="swiper-slide review-card">
+                <img class="review-card__photo" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80" alt="Client portrait" loading="lazy">
+                <div class="review-card__body">
+                  <h3 class="review-card__name">Olivia M., Austin</h3>
+                  <p class="review-card__text">"Сработало то, что у нас был clear reasonable cause. Очень понравилось, что меня вели по шагам и объясняли, что происходит."</p>
+                </div>
+              </article>
+
+              <article class="swiper-slide review-card">
+                <img class="review-card__photo" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Client portrait" loading="lazy">
+                <div class="review-card__body">
+                  <h3 class="review-card__name">Jacob R., Seattle</h3>
+                  <p class="review-card__text">"Мне нужен был не адвокат в суде, а грамотный ответ в IRS. Всё оформили корректно, из-за чего удалось снизить риски и давление со стороны налоговой."</p>
+                </div>
+              </article>
+
+              <article class="swiper-slide review-card">
+                <img class="review-card__photo" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80" alt="Client portrait" loading="lazy">
+                <div class="review-card__body">
+                  <h3 class="review-card__name">Amelia S., Tampa</h3>
+                  <p class="review-card__text">"Было важно успеть до дедлайна и не наделать ошибок. В итоге сделали подачу вовремя, а коммуникацию с IRS взяли на себя."</p>
+                </div>
+              </article>
+
+              <article class="swiper-slide review-card">
+                <img class="review-card__photo" src="https://images.unsplash.com/photo-1545996124-0501ebae84d0?auto=format&fit=crop&w=400&q=80" alt="Client portrait" loading="lazy">
+                <div class="review-card__body">
+                  <h3 class="review-card__name">Michael T., New York</h3>
+                  <p class="review-card__text">"Первый раз столкнулся с filing requirements для нерезидентов. Специалисты собрали понятную позицию и помогли выйти из ситуации без паники."</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="reviews-slider__controls">
+              <button class="reviews-slider__btn" id="reviewsPrev" type="button" aria-label="Предыдущий отзыв">←</button>
+              <div class="reviews-slider__pagination" id="reviewsPagination"></div>
+              <button class="reviews-slider__btn" id="reviewsNext" type="button" aria-label="Следующий отзыв">→</button>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /slide reviews -->
+
+
+      <!-- ====== SLIDE 8 — КВИЗ ====== -->
+      <div class="swiper-slide slide slide--quiz">
+        <div class="slide__content container">
+
+          <div class="slide__label" data-i18n="quiz_label">Быстрый квиз</div>
+          <h2 class="slide__title" data-i18n="quiz_title">Проверьте за 30 секунд, есть ли шанс снять штраф</h2>
+
+          <form class="quiz" id="quizForm" novalidate>
+            <div class="quiz__group quiz__group--step is-active" data-quiz-step="0" role="group" aria-label="Вопрос 1">
+              <p class="quiz__question">1. Это ваш первый штраф по filing forms?</p>
+              <label class="quiz__option"><input type="radio" name="q1" value="yes" required> Да</label>
+              <label class="quiz__option"><input type="radio" name="q1" value="no"> Нет</label>
+            </div>
+
+            <div class="quiz__group quiz__group--step" data-quiz-step="1" role="group" aria-label="Вопрос 2">
+              <p class="quiz__question">2. Компания была неактивной или без U.S. nexus?</p>
+              <label class="quiz__option"><input type="radio" name="q2" value="yes" required> Да</label>
+              <label class="quiz__option"><input type="radio" name="q2" value="no"> Нет</label>
+            </div>
+
+            <div class="quiz__group quiz__group--step" data-quiz-step="2" role="group" aria-label="Вопрос 3">
+              <p class="quiz__question">3. Готовы подать корректный ответ в IRS в ближайшее время?</p>
+              <label class="quiz__option"><input type="radio" name="q3" value="yes" required> Да</label>
+              <label class="quiz__option"><input type="radio" name="q3" value="no"> Нет</label>
+            </div>
+
+            <div class="quiz__step-indicator">
+              <span id="quizStepCurrent">1</span>/<span id="quizStepTotal">3</span>
+            </div>
+
+            <div class="quiz__actions">
+              <button class="btn btn--ghost" id="quizPrev" type="button">Назад</button>
+              <button class="btn btn--primary" id="quizNext" type="button">Далее</button>
+              <button class="btn btn--primary" id="quizSubmit" type="submit">Показать результат</button>
+              <a href="#" class="btn btn--ghost" data-slide="8" data-i18n="quiz_cta">Получить персональную оценку</a>
+            </div>
+
+            <p class="quiz__result" id="quizResult" aria-live="polite"></p>
+          </form>
+
+        </div>
+      </div><!-- /slide quiz -->
+
+
+      <!-- ====== SLIDE 9 — КОНТАКТЫ ====== -->
+      <div class="swiper-slide slide slide--contact">
+        <div class="slide__content container">
+
+          <div class="slide__label slide__label--light" data-i18n="contact_label">Контакты</div>
+          <h2 class="slide__title slide__title--light" data-i18n="contact_title">Получили штраф? Разберём вашу ситуацию</h2>
+
+          <p class="hero__sub hero__sub--light" data-i18n="contact_sub">
+            Напишите нам — и мы скажем, есть ли у вас шанс на снятие штрафа. Бесплатная первичная оценка.
+          </p>
+
+          <!-- Contact channels -->
+          <div class="contact-channels" role="list" aria-label="Каналы связи">
+
+            <a class="contact-btn contact-btn--tg"
+               href="https://t.me/yourusername"
+               target="_blank" rel="noopener noreferrer"
+               role="listitem" aria-label="Написать в Telegram">
+              <!-- Telegram icon -->
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 14.3l-2.95-.924c-.64-.203-.658-.64.136-.954l11.566-4.461c.537-.194 1.006.131.972.26z"/>
+              </svg>
+              Telegram
+            </a>
+
+            <a class="contact-btn contact-btn--wa"
+               href="https://wa.me/yourphone"
+               target="_blank" rel="noopener noreferrer"
+               role="listitem" aria-label="Написать в WhatsApp">
+              <!-- WhatsApp icon -->
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+              </svg>
+              WhatsApp
+            </a>
+
+            <a class="contact-btn contact-btn--email"
+               href="mailto:info@taxfreecorp.com"
+               role="listitem" aria-label="Написать Email">
+              <!-- Email icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m2 7 10 7 10-7"/>
+              </svg>
+              Email
+            </a>
+
+          </div><!-- /contact-channels -->
+
+          <!-- Contact form -->
+          <div class="contact-form">
+            <h3 class="contact-form__title" data-i18n="form_title">Или оставьте сообщение</h3>
+
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-input"
+                  placeholder="Ваше имя"
+                  data-i18n-placeholder="form_name"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                  aria-label="Ваше имя"
+                >
+                <input
+                  type="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Email"
+                  data-i18n-placeholder="form_email"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                  aria-label="Email"
+                >
+              </div>
+              <textarea
+                name="message"
+                class="form-input form-textarea"
+                placeholder="Опишите ситуацию кратко"
+                data-i18n-placeholder="form_message"
+                required
+                aria-required="true"
+                aria-label="Сообщение"
+              ></textarea>
+              <button type="submit" class="btn btn--primary btn--submit" data-i18n="form_submit">Отправить</button>
+            </form>
+          </div>
+
+        </div>
+      </div><!-- /slide contact -->
+
+
+    </div><!-- /swiper-wrapper -->
+  </div><!-- /swiper -->
+
+
+  <!-- =========================================
+       FOOTER (fixed, always visible)
+       ========================================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__container">
+      <span class="footer__copy">© 2025 TaxFreeCorp</span>
+      <span class="footer__disclaimer" data-i18n="footer_disclaimer">Услуги носят информационный характер и не являются юридической консультацией</span>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/hero-composition.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
