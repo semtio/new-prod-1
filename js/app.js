@@ -3,6 +3,7 @@
    ============================================= */
 const i18n = {
   ru: {
+    nav_home:     'Главная',
     nav_penalty:  'О штрафе',
     nav_service:  'Что делаем',
     nav_qualify:  'Кто подходит',
@@ -86,6 +87,7 @@ const i18n = {
   },
 
   en: {
+    nav_home:     'Home',
     nav_penalty:  'The Penalty',
     nav_service:  'Our Service',
     nav_qualify:  'Who Qualifies',
@@ -183,6 +185,11 @@ function applyLang(lang) {
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.dataset.i18nPlaceholder
     if (i18n[lang][key]) el.placeholder = i18n[lang][key]
+  })
+
+  document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+    const key = el.dataset.i18nAriaLabel
+    if (i18n[lang][key]) el.setAttribute('aria-label', i18n[lang][key])
   })
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
